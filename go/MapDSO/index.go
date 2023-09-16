@@ -3,21 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	var cars = map[string]string {
+	cars := map[string]string{
 		"volvo": "Volvo",
-		"kia": "Kia Forte",
+		"kia":   "Kia Forte",
 	}
 
-	cars["ford"] = "Ford Ranger"
-
-	delete(cars, "ford")
-
-	fmt.Println(len(cars))
-	fmt.Println(cars)
-
-	if volvo, ok := cars["volvo-extreme"]; ok {
-		fmt.Println(volvo)
+	if v, ok := cars["vinFast"]; ok {
+		fmt.Println("Key has found in map: " + v)
 	} else {
-		fmt.Println("Key not found in map!")
+		fmt.Println("Key has not found in map!")
 	}
+	fmt.Println(cars)
 }

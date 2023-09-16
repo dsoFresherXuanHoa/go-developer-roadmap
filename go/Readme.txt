@@ -1,24 +1,25 @@
 - Quick Started
+- Package
 - Variable
-- Constant
 - Data Type
+- Type Casting
+- Constant
+- For Loop
 - If Else
 - Switch Case
-- For Loop
-- Break, Continue
-- Function
-- Workspace *
+- Defer
+- Pointer
+- Structs
 - Array
 - Slice
-- Variadic Function
 - Map
-- Pointer
-- Struct
-- Receiver
+- Function
+- Function Closure
+- Method
 - Interface
-- Concurrency *
-- Parallelism *
+- Reader, Buffer
+- Generic
+- Concurrency
 - Goroutine
-- Scheduler *
-- Channels
-- Go Module *
+- Chanel
+- Mutex

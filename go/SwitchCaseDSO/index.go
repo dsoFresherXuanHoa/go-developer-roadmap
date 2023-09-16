@@ -1,19 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"runtime"
+)
 
-func main()  {
-	var gender = 0;
-
-	switch gender {
-	case 0:
-		fmt.Println("Hi! Mr!")
-		fallthrough
-	case 1: 
-		fmt.Println("Hi! Mrs!")
-	case 2:
-		fmt.Println("Hi!")
+func main() {
+	switch os := runtime.GOOS; os {
+	case "darwin":
+		fmt.Println("OS X")
+	case "linux":
+		fmt.Println("Linux")
 	default:
-		fmt.Println("Finish!!!")
-	} 
-} 
+		fmt.Println(os)
+	}
+}

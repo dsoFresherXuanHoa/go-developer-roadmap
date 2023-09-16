@@ -3,9 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	var author string = "dsoFresherXuanHoa";
-	var age = 22;
-	gender := true;
+	var username string = "dsoFresherXuanHoa"
+	password := "dsoFresherXuanHoa"
 
-	fmt.Println(author, age, gender)
+	fmt.Println(username, password)
 }

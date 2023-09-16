@@ -1,21 +1,25 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
-func main()  {
-	var gender = 0;
+func doAs(username, password string) (*string, error) {
+	if username == password {
+		return &username, nil
+	}
+	return nil, errors.New("USERNAME OR PASSWORD IS INCORRECT")
+}
 
-	if gender == 0 {
-		fmt.Println("Hi! Mr!")
-	} else if gender == 1 {
-		fmt.Println("Hi! Mrs!")
+func main() {
+	username := "dsoFresherXuanHoa"
+	password := "dsoFresherXuanHoa"
+
+	if user, err := doAs(username, password); err != nil {
+		fmt.Println("ERROR: " + err.Error())
 	} else {
-		fmt.Println("Hi!")
+		fmt.Println("Success: Do as " + *user)
 	}
 
-	if isError := false; !isError {
-		fmt.Println(isError)
-	} else {
-		fmt.Println("OK!")
-	}
 }

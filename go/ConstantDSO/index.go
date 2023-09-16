@@ -2,8 +2,11 @@ package main
 
 import "fmt"
 
-func main() {
-	const gender bool = true;
+const (
+	username string = "dsoFresherXuanHoa"
+	gender   bool   = true
+)
 
-	fmt.Println(gender)
+func main() {
+	fmt.Println(username, gender)
 }

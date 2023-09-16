@@ -1,3 +1,3 @@
-module golang
+module go-basic-syntax
 
-go 1.21.0
+go 1.20

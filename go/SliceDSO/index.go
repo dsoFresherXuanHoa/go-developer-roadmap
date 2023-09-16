@@ -1,31 +1,21 @@
 package main
 
-import (
-	"fmt"
-	"reflect"
-)
+import "fmt"
 
 func main() {
-	var cars = [...]string{"Volvo", "Kia Forte", "Ford Ranger"}
-	var carsSlice = cars[0:]
+	cars := [3]string{"Volvo", "Kia Forte", "Ford Ranger"}
+	carsSlice := cars[:]
+	carsMake := make([]string, 0, 5)
 
-	fmt.Println(cars, reflect.TypeOf(cars))
-	fmt.Println(carsSlice, reflect.TypeOf(carsSlice))
+	fmt.Println(carsSlice)
+	cars[0] = "Toyota"
+	carsSlice = append(carsSlice, "VinFast")
 
+	fmt.Println(carsSlice)
 	fmt.Println(len(carsSlice), cap(carsSlice))
+	fmt.Println(len(carsMake), cap(carsMake))
 
-	var vehicles =  make([]int, 3, 5);
-	var vehiclesBak = make([]int, 3, 5);
-	var subVehicles = vehicles[0:len(vehicles) - 1]
-
-	copy(vehicles, vehiclesBak)
-
-	vehicles = append(vehicles, 1)
-	vehicles = append(vehicles, 1)
-	vehicles = append(vehicles, 1)
-	fmt.Println(len(vehicles), cap(vehicles))
-
-	fmt.Println(vehicles)
-	fmt.Println(vehiclesBak)
-	fmt.Println(subVehicles)
+	for i, v := range carsSlice {
+		fmt.Println("Index: ", i, ". Value: ", v)
+	}
 }
