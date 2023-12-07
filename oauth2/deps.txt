@@ -1,0 +1,1 @@
+go get github.com/gin-gonic/gin gorm.io/gorm gorm.io/driver/mysql golang.org/x/oauth2
