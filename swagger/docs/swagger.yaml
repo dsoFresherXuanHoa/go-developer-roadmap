@@ -1,0 +1,58 @@
+definitions:
+  common.response:
+    properties:
+      data: {}
+      error:
+        type: string
+      message:
+        type: string
+      statusCode:
+        type: integer
+      statusText:
+        type: string
+    type: object
+
+  entity.AccountCreatable:
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+    type: object
+info:
+  contact: {}
+  title: Account Service API
+  version: "2.0"
+paths:
+  /accounts:
+    post:
+      consumes:
+        - application/json
+      description: add by json account
+      parameters:
+        - description: Add account
+          in: body
+          name: account
+          required: true
+          schema:
+            $ref: "#/definitions/entity.AccountCreatable"
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: "#/definitions/common.response"
+        "400":
+          description: Bad Request
+          schema:
+            $ref: "#/definitions/common.response"
+        "404":
+          description: Not Found
+          schema:
+            $ref: "#/definitions/common.response"
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: "#/definitions/common.response"
+      summary: Add an Account

@@ -1,0 +1,2 @@
+go install github.com/cosmtrek/air@latest github.com/swaggo/swag/cmd/swag@latest
+go get github.com/gin-gonic/gin gorm.io/gorm gorm.io/driver/mysql github.com/joho/godotenv golang.org/x/crypto/bcrypt github.com/golang-jwt/jwt github.com/asaskevich/govalidator github.com/swaggo/swag/cmd/swag github.com/swaggo/gin-swagger github.com/swaggo/files
